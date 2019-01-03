@@ -310,7 +310,7 @@ ALSAdViewDelegate interfaces related to interstitial, for more detail please che
 
 ```
 
-###  <a name="rewardedvideo">Adding the RewardVideo Ad API in iOS</a>
+###  <a name="rewardedvideo">Adding the RewardedVideo Ad API in iOS</a>
 
 ```     
 /**
@@ -433,5 +433,5 @@ ALSAppWallDelegate interfaces related to Appwall, for more detail please check A
 
 ### <a name="sdkDemo">SDK Demo Download</a>
 1. [Download Demo](https://github.com/zero-sdk/iOS_SDK/blob/master/ApplinsDemo.zip).
-2. Run 'pod update' in Finder.
+2. Run 'pod update' in terminal.
 
