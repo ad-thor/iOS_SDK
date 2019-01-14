@@ -28,7 +28,7 @@
 
 ## <a name="step1">Initialize mobile ads </a>
 
-- Add the `NSAllowsArbitraryLoads`, `NSAllowsArbitraryLoadsForMedia`, and `NSAllowsArbitraryLoadsInWebContent` exceptions to your app's Info.plist file to disable ATS restrictions.
+- Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
 
 ```
 <key>NSAppTransportSecurity</key>
