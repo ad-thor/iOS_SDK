@@ -35,10 +35,6 @@
 <dict>
     <key>NSAllowsArbitraryLoads</key>
     <true/>
-    <key>NSAllowsArbitraryLoadsForMedia</key>
-    <true/>
-    <key>NSAllowsArbitraryLoadsInWebContent</key>
-    <true/>
 </dict>
 ```
 
