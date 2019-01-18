@@ -24,7 +24,7 @@
 
 **Manual download **
 
-- You can also [download](https://github.com/zero-sdk/iOS_SDK/blob/master/ApplinsSDK.framework.zip) a copy of the SDK framework directly, unzip the file, and import the framework into your project in Xcode.
+- You can also [download](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSDK.framework.zip) a copy of the SDK framework directly, unzip the file, and import the framework into your project in Xcode.
 
 ## <a name="step1">Initialize mobile ads </a>
 
