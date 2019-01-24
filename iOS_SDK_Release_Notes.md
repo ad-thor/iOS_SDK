@@ -1,6 +1,6 @@
 # iOS SDK Release Notes
 
-| Version | Release Date  | Notes                                    |
+| Version |  Release Date  | Notes                                    |
 | ------- |:-------------:|:-----------------------------------------|
 | 4.0.4   | 2019-01-24| * change video ad domain|
 | 4.0.3   | 2019-01-18    | * fix issue : closing interstitial changes alert view position, add interface to specify http or https schema |
