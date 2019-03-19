@@ -433,26 +433,26 @@ ALSAppWallDelegate interfaces related to Appwall, for more detail please check A
 2. Run 'pod update' in terminal.
 
 ## <a name="error">Error Code For SDK</a>
-
+Error codes could be obtained from delegate method.
 | Error Code     | Description                                   |
 | -------------- | --------------------------------------------- |
-| ALSError_10000 | Initializtion failed                          |
-| ALSError_10002 | Initializtion data error                      |
-| ALSError_10003 | Slot ID shouldn't be empty                                   |
-| ALSError_10004 | Slot ID closed                                   |
-| ALSError_10005 | The slot IDs should belong to the same APP |
-| ALSError_20000 | Http status error                                  |
-| ALSError_20001 | No network                                        |
-| ALSError_20002 | Fail to get network status                              |
-| ALSError_20003 | Webview loading html timeout                           |
-| ALSError_30001 | Response data error                                  |
-| ALSError_40001 | AD Material download error                              |
-| ALSError_40004 | AD Material is downloading                            |
-| ALSError_40005 | AD Material is not found                          |
-| ALSError_40007 | Get ads failed. eg:no Ads                          |
-| ALSError_50000 | Initialization interface is not called                         |
-| ALSError_50001 | Preload interface is not called                          |
-| ALSError_50005 | interstitial request has been sent or interstitial is ready            |
-| ALSError_50007 | Interstitial isn't ready                              |
-| ALSError_60002 | Parsing data error                                  |
-| ALSError_80000 | Rewarded video cache error                              |
+| 10000 | Initializtion failed                          |
+| 10002 | Initializtion data error                      |
+| 10003 | Slot ID shouldn't be empty                                   |
+| 10004 | Slot ID closed                                   |
+| 10005 | The slot IDs should belong to the same APP |
+| 20000 | Http status error                                  |
+| 20001 | No network                                        |
+| 20002 | Fail to get network status                              |
+| 20003 | Webview loading html timeout                           |
+| 30001 | Response data error                                  |
+| 40001 | AD Material download error                              |
+| 40004 | AD Material is downloading                            |
+| 40005 | AD Material is not found                          |
+| 40007 | Get ads failed. eg:no Ads                          |
+| 50000 | Initialization interface is not called                         |
+| 50001 | Preload interface is not called                          |
+| 50005 | interstitial request has been sent or interstitial is ready            |
+| 50007 | Interstitial isn't ready                              |
+| 60002 | Parsing data error                                  |
+| 80000 | Rewarded video cache error                              |
