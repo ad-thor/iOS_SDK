@@ -434,6 +434,7 @@ ALSAppWallDelegate interfaces related to Appwall, for more detail please check A
 
 ## <a name="error">Error Code For SDK</a>
 Error codes could be obtained from delegate method.
+
 | Error Code     | Description                                   |
 | -------------- | --------------------------------------------- |
 | 10000 | Initializtion failed                          |
