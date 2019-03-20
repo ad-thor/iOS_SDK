@@ -2,7 +2,8 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.0.6   |      2019-02-26       | * fix issue : fix memory leak |
+| 4.0.8   |      2019-03-20       | * native and rewarded video ad support inner webview landing page.
+| 4.0.7   |      2019-02-26       | * fix issue : fix memory leak |
 | 4.0.6   |      2019-02-26       | * fix issue : A memory leak caused by a circular reference（NSURLSession-Delegate）|
 | 4.0.5   |      2019-02-13       | * fix issue : WKWebview click ad failed, Increase the redirection of time |
 | 4.0.4   |      2019-01-24       | * change video ad domain                                     |
