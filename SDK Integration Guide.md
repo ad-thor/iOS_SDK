@@ -76,11 +76,17 @@
 ```
 
 ### <a name="native">Adding the Native Ad API in iOS</a>
+We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK could send impression and track without developer's concern.
+
+```
+@interface ALSView : ALSNativeAd
+@end
+```
 
 ```
  /**
- We recommend use ALSNative Interface！！！
- Using inheritance ALSNativeAd advertising View customize layout, in prior to add to the parent View will return to the frame and successful nativeModel assigned to a custom View.
+ We recommend the AD View inherits ALSNative.
+ Get the nativeModel assigned to AD view and setting up layout in it.
  
  @param slot_id         Native AD ID
  @param delegate        Set Delegate of Ad event(<ALSNativeAdDelegate>)
