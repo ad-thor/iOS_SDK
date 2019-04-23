@@ -203,8 +203,8 @@ We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK 
 	self.nativeVideoModel = nativeVideoModel
 	//add mediaview, width:height = 1.77:1
     	ALSMediaView *mediaView = [[ALSMediaView alloc] initWithFrame:CGRectMake(x, y, width, width/1.77)];
-    	mediaView.EnableAutoPlay = NO;   //play video via 3g/4g
-    	mediaView.EnableWWANPlay = YES;  //auto control play/pause
+    	mediaView.EnableAutoPlay = NO;   //auto control play/pause
+    	mediaView.EnableWWANPlay = YES;  //play video via 3g/4g
     	[mediaView setNativeVideoAd:nativeVideoModel];
     	[self.view addSubview:self.mediaView];
     	//add title
