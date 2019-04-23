@@ -2,7 +2,8 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.0.11  |      2019-04-16       | * fix issue : fix background issue |
+| 4.1.0  |      2019-04-23       | * fix issue : fix native manual click interface issue |
+| 4.0.11  |      2019-04-16       | * fix issue : fix background task issue |
 | 4.0.8   |      2019-03-20       | * native and rewarded video ad support inner webview landing page. |
 | 4.0.7   |      2019-02-26       | * fix issue : fix memory leak |
 | 4.0.6   |      2019-02-26       | * fix issue : A memory leak caused by a circular reference（NSURLSession-Delegate）|
