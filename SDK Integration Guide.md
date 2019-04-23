@@ -79,7 +79,13 @@
 We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK could send impression and track without developer's concern.
 
 ```
-@interface ALSView : ALSNativeAd
+@interface NativeADView : ALSNativeAd
+- (void)setValuesWith:(ALSNativeAdModel *)model;
+@end
+
+@implementation NativeADView
+- (void)setValuesWith:(ALSNativeAdModel *){
+}
 @end
 ```
 
