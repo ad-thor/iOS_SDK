@@ -82,13 +82,12 @@ We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK 
 @interface NativeADView : ALSNativeAd
 - (void)setValuesWith:(ALSNativeAdModel *)model;
 @end
-
+```
+Add an interface to assign AD model to AD view.
+```
 @implementation NativeADView
+
 - (void)setValuesWith:(ALSNativeAdModel *model){
-//get element here
-//model.title
-//model.icon
-//mdoel.desc
 }
 @end
 ```
