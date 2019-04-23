@@ -91,7 +91,7 @@ Add an interface to assign AD model to AD view.
 }
 @end
 ```
-
+Here're the interfaces to get ads.
 ```
  /**
  We recommend the AD View inherits ALSNative.
