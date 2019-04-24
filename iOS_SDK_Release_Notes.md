@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.1.1  |      2019-04-24       | * fix issue : optimize network traffic |
 | 4.1.0  |      2019-04-23       | * fix issue : fix native manual click interface issue |
 | 4.0.11  |      2019-04-16       | * fix issue : fix background task issue |
 | 4.0.8   |      2019-03-20       | * native and rewarded video ad support inner webview landing page. |
