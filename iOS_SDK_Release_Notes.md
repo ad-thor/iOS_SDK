@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.1.3  |      2019-04-26       | * code optimization  |
 | 4.1.2  |      2019-04-25       | * code optimization  |
 | 4.1.1  |      2019-04-24       | * fix issue : optimize network traffic |
 | 4.1.0  |      2019-04-23       | * fix issue : fix native manual click interface issue |
