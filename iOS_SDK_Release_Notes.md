@@ -2,7 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.1.4  |      2019-04-29       | * banner could stay in the safe area  |
+| 4.1.4  |      2019-04-29       | * banner could be added in the safe area  |
 | 4.1.3  |      2019-04-26       | * code optimization  |
 | 4.1.2  |      2019-04-25       | * code optimization  |
 | 4.1.1  |      2019-04-24       | * fix issue : optimize network traffic |
