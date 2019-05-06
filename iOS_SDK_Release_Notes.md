@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.1.5  |      2019-05-06       | * fix issue: background task issue  |
 | 4.1.4  |      2019-04-29       | * banner could be added in the safe area  |
 | 4.1.3  |      2019-04-26       | * code optimization  |
 | 4.1.2  |      2019-04-25       | * code optimization  |
