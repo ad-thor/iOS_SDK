@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.1.8  |      2019-07-25       | * deeplink, fix issue: interstitial close button miss  |
 | 4.1.7  |      2019-05-23       | * code optimization  |
 | 4.1.6  |      2019-05-15       | * fix issue: banner impression  |
 | 4.1.5  |      2019-05-06       | * fix issue: background task issue  |
