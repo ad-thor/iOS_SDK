@@ -2,6 +2,8 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.2.1  |      2019-09-29       | * iOS13 emergency fixed  |
+| 4.2.0  |      2019-09-11       | * child-orientied support (COPPA)  |
 | 4.1.9  |      2019-07-31       | * for meitu, remove appwall ad  |
 | 4.1.8  |      2019-07-25       | * deeplink, fix issue: interstitial close button miss  |
 | 4.1.7  |      2019-05-23       | * code optimization  |
