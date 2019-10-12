@@ -2,7 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.2.3  |      2019-10-8       | * iOS13 release version  |
+| 4.2.3  |      2019-10-12       | * iOS13 release version  |
 | 4.2.2  |      2019-10-8       | * remove appwall, ompatible with XCode10  |
 | 4.2.1  |      2019-09-29       | * iOS13 emergency fixed  |
 | 4.2.0  |      2019-09-11       | * child-orientied support (COPPA)  |
