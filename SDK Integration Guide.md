@@ -75,6 +75,7 @@ It is recommended that obtaining the user's consent before SDK initialization.
 * Under "Build Settings->Other Linker Flags" add: "-ObjC"
 * Initialize Applins SDK in your didFinishLaunchingWithOptions method.
 
+```
 #import <ApplinsSDK/ApplinsSDK.h>
 …
 
