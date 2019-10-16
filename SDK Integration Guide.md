@@ -50,18 +50,18 @@
 
 
 - for COPPA:
-	In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.
+	In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.	
 
 	Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
 
-``` java
+```
      //child-oriented
      [[Applins shareSDK] setIsChildDirected:NO];
 ```
 
-	If SDK don't gather the user informatian ,you probably get no fill.
-	It is recommended that obtaining the user's consent before SDK initialization.
-
+If SDK don't gather the user informatian ,you probably get no fill.
+It is recommended that obtaining the user's consent before SDK initialization.
+	
 - Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
 
 ```
