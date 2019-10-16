@@ -13,7 +13,7 @@
 - [Error Code For SDK](#error)
 ## <a name="start">Prerequisites</a>
 
-- Use Xcode 9.0 or higher
+- Use Xcode 10.0 or higher
 - Target iOS 8.0 or higher
 
 ## <a name="step1">Import the Mobile Ads SDK </a>
@@ -27,7 +27,7 @@
 
 - You can also [download](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSDK.framework.zip) a copy of the SDK framework directly, unzip the file, and import the framework into your project in Xcode.
 
-## <a name="step1">Initialize mobile ads </a>
+## <a name="step2">Initialize mobile ads </a>
 
 - Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
 
@@ -40,27 +40,8 @@
 ```
 
 * Under "Build Settings->Other Linker Flags" add: "-ObjC"
-* Initialize Applins SDK in your didFinishLaunchingWithOptions method.
 
-```
-#import <ApplinsSDK/ApplinsSDK.h>
-…
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-  // Initialize Applins SDK
-  [[Applins shareSDK] initSDK:@"Your Slot ID"];
-  return YES;
-}
-
-@end
-```
-- 
-  Use this interface to upload consent from affected users.
-
+- GDPR : Use this interface to upload consent from affected users.
 
 ```
 /**
@@ -79,11 +60,42 @@
     }];
 ```
 
-- Warning:
+Warning:
 
 	If SDK don't gather the user informatian ,you probably get no fill.
 	It is recommended that obtaining the user's consent before SDK initialization.
 
+
+- COPPA:
+In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.
+
+Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
+
+``` java
+     //child-oriented
+     [[Applins shareSDK] setIsChildDirected:NO];
+```
+Warning:
+ 	It is recommended to call this interface before requesting advertisements.
+	
+
+* Initialize Applins SDK in your didFinishLaunchingWithOptions method.
+```
+#import <ApplinsSDK/ApplinsSDK.h>
+…
+
+@implementation AppDelegate
+
+- (BOOL)application:(UIApplication *)application
+    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+  // Initialize Applins SDK
+  [[Applins shareSDK] initSDK:@"Your Slot ID"];
+  return YES;
+}
+
+@end
+```
 
 
 ### <a name="native">Adding the Native Ad API in iOS</a>
