@@ -73,7 +73,14 @@
 - (void)uploadConsentValue:(NSString *)consentValue
 	       consentType:(NSString *)consentType
 		  complete:(void(^)(BOOL state))complete;
+	
+	
+   [[Applins shareSDK] uploadConsentValue:@"yes" consentType:@"GDPR" complete:^(BOOL state) {
+        NSLog(@"%ld",(long)state);
+    }];
 ```
+
+
 
 ### <a name="native">Adding the Native Ad API in iOS</a>
 We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK could send impression and track without developer's concern.
