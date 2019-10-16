@@ -2,7 +2,10 @@
 
 - [Before You Start](#start)
 - [SDK Set Up Use CocoaPods](#step1)
-- [SDK Set Up Manually](#step2)
+- [Integration SDK](#step2)
+  - [GDPR](#gdpr)
+  - [COPPA](#coppa)
+  - [Initialization](#init)
   - [Native](#native)
   - [Native Video](#nativevideo)
   - [Banner](#banner)
@@ -27,9 +30,9 @@
 
 - You can also [download](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSDK.framework.zip) a copy of the SDK framework directly, unzip the file, and import the framework into your project in Xcode.
 
-## <a name="step2">Initialize mobile ads </a>
+## <a name="step2">Integration SDK</a>
 
-- for GDPR : Use this interface to upload consent from affected users.
+### <a name="gdpr">GDPR : Use this interface to upload consent from affected users.</a> 
 
 ```
 /**
@@ -47,21 +50,20 @@
    [[Applins shareSDK] uploadConsentValue:@"yes" consentType:@"GDPR" complete:^(BOOL state) {
     }];
 ```
+1.If SDK don't gather the user informatian ,you probably get no fill.
+2.It is recommended that obtaining the user's consent before SDK initialization.
 
-
-- for COPPA:
-	In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.	
-
-	Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
-
+### <a name="coppa">Child-Oriented(COAPPA)</a> 
+In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.	
+Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
 ```
      //child-oriented
      [[Applins shareSDK] setIsChildDirected:NO];
-```
-
-If SDK don't gather the user informatian ,you probably get no fill.
-It is recommended that obtaining the user's consent before SDK initialization.
+```     
+1.If SDK don't gather the user informatian ,you probably get no fill.
+2.It is recommended that obtaining the user's consent before SDK initialization.	
 	
+### <a name="init">SDK initializion</a> 
 - Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
 
 ```
