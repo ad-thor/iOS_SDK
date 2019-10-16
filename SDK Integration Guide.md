@@ -76,9 +76,13 @@
 	
 	
    [[Applins shareSDK] uploadConsentValue:@"yes" consentType:@"GDPR" complete:^(BOOL state) {
-        NSLog(@"%ld",(long)state);
     }];
 ```
+
+- Warning:
+
+	If SDK don't gather the user informatian ,you probably get no fill.
+	It is recommended that obtaining the user's consent before SDK initialization.
 
 
 
