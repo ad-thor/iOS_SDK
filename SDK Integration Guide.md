@@ -29,19 +29,7 @@
 
 ## <a name="step2">Initialize mobile ads </a>
 
-- Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
-
-```
-<key>NSAppTransportSecurity</key>
-<dict>
-    <key>NSAllowsArbitraryLoads</key>
-    <true/>
-</dict>
-```
-
-* Under "Build Settings->Other Linker Flags" add: "-ObjC"
-
-- GDPR : Use this interface to upload consent from affected users.
+- for GDPR : Use this interface to upload consent from affected users.
 
 ```
 /**
@@ -60,27 +48,33 @@
     }];
 ```
 
-Warning:
 
-	If SDK don't gather the user informatian ,you probably get no fill.
-	It is recommended that obtaining the user's consent before SDK initialization.
+- for COPPA:
+	In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.
 
-
-- COPPA:
-In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.
-
-Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
+	Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
 
 ``` java
      //child-oriented
      [[Applins shareSDK] setIsChildDirected:NO];
 ```
-Warning:
- 	It is recommended to call this interface before requesting advertisements.
-	
 
-* Initialize Applins SDK in your didFinishLaunchingWithOptions method.
+	If SDK don't gather the user informatian ,you probably get no fill.
+	It is recommended that obtaining the user's consent before SDK initialization.
+
+- Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
+
 ```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
+</dict>
+```
+
+* Under "Build Settings->Other Linker Flags" add: "-ObjC"
+* Initialize Applins SDK in your didFinishLaunchingWithOptions method.
+
 #import <ApplinsSDK/ApplinsSDK.h>
 …
 
