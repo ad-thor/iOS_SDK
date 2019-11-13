@@ -2,9 +2,10 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.2.5  |      2019-11-13       | * optimize network traffic  |
 | 4.2.4  |      2019-10-22       | * fix issue: inner appstore style  |
 | 4.2.3  |      2019-10-12       | * iOS13 release version  |
-| 4.2.2  |      2019-10-8       | * remove appwall, ompatible with XCode10  |
+| 4.2.2  |      2019-10-8       | * remove appwall, compatible with XCode10  |
 | 4.2.1  |      2019-09-29       | * iOS13 emergency fixed  |
 | 4.2.0  |      2019-09-11       | * child-orientied support (COPPA)  |
 | 4.1.9  |      2019-07-31       | * for meitu, remove appwall ad  |
@@ -16,7 +17,7 @@
 | 4.1.3  |      2019-04-26       | * code optimization  |
 | 4.1.2  |      2019-04-25       | * code optimization  |
 | 4.1.1  |      2019-04-24       | * fix issue : optimize network traffic |
-| 4.1.0  |      2019-04-23       | * fix issue : fix native manual click interface issue |
+| 4.1.0  |      2019-04-23       | * fix issue : native manual click interface issue |
 | 4.0.11  |      2019-04-16       | * fix issue : fix background task issue |
 | 4.0.8   |      2019-03-20       | * native and rewarded video ad support inner webview landing page. |
 | 4.0.7   |      2019-02-26       | * fix issue : fix memory leak |
