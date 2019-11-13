@@ -2,7 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.2.5  |      2019-11-13       | * optimize network traffic  |
+| 4.2.5  |      2019-11-13       | * optimize network traffic and revenue |
 | 4.2.4  |      2019-10-22       | * fix issue: inner appstore style  |
 | 4.2.3  |      2019-10-12       | * iOS13 release version  |
 | 4.2.2  |      2019-10-8       | * remove appwall, compatible with XCode10  |
