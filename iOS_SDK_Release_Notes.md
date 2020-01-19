@@ -2,7 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.2.7  |      2019-12-14       | * fix bug on iOS13 |
+| 4.2.7  |      2020-01-14       | * fix bug on iOS13 |
 | 4.2.6  |      2019-11-27       | * fix banner memory leak |
 | 4.2.5  |      2019-11-13       | * optimize network traffic and revenue |
 | 4.2.4  |      2019-10-22       | * fix issue: inner appstore style  |
