@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.2.8  |      2020-01-21       | * remove unused code |
 | 4.2.7  |      2020-01-14       | * fix bug on iOS13 |
 | 4.2.6  |      2019-11-27       | * fix banner memory leak |
 | 4.2.5  |      2019-11-13       | * optimize network traffic and revenue |
