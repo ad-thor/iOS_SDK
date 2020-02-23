@@ -473,17 +473,14 @@ Preload Splash Ad
 Call this interface preload Splash AD.
  
 @param slotid          Splash slot ID
-@param delegate        Set Delegate of Ads event
-@param view	       CustomView showing your app name and icon(nil if no needed)
+@param delegate      Set Delegate of Ads event
+@param window          Set UIWindow
+@param launchImage          Set LaunchImage
+@param customAdView        Set bottom custom view if needed
+@param waitAdTime        Set loading time, ad will not show if not ready during waitAdTime
 @param isTest          Use test advertisement or not
  */
-- (void)preloadSplashAd:(NSString *)slotid delegate:(id)delegate customAdView:(UIView*)view isTest:(BOOL)isTest;
-
-/**
- Show Splash ad
- Call this method after preload Splash ad success
- */
-- (void)showSplashlAd;
+- (void)preloadaAndShowSplashAd:(NSString *)slotid delegate:(id)delegate window:(UIWindow*)window launchImage:(UIImage*)launchImage customAdView:(UIView*)view waitAdTime:(float)waitTime isTest:(BOOL)isTest;
 
 /**
 Delegate
