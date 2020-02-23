@@ -12,6 +12,7 @@
   - [Dynamic Interstitial](#interstitial)
   - [Rewarded Video](#rewardedvideo)
   - [AppWall](#Appwall)
+  - [Splash](#Splash)
 - [SDK Demo Download](#sdkDemo)
 - [Error Code For SDK](#error)
 ## <a name="start">Prerequisites</a>
@@ -463,6 +464,35 @@ ALSAppWallDelegate interfaces related to Appwall, for more detail please check A
 -(void)ALSAppWallJumpfail:(ALSNativeAd*)nativeAd;
 
 ```
+
+###  <a name="Splash">Adding the Splash Ad API in iOS</a>
+* You need to add your own launch screen first. Then preload and show Splash AD immediately after opening the app.
+```
+/**
+Preload Splash Ad
+Call this interface preload Splash AD.
+ 
+@param slotid          Splash slot ID
+@param delegate        Set Delegate of Ads event
+@param view	       CustomView showing your app name and icon(nil if no needed)
+@param isTest          Use test advertisement or not
+ */
+- (void)preloadSplashAd:(NSString *)slotid delegate:(id)delegate customAdView:(UIView*)view isTest:(BOOL)isTest;
+
+/**
+ Show Splash ad
+ Call this method after preload Splash ad success
+ */
+- (void)showSplashlAd;
+
+/**
+Delegate
+*/
+- (void)ALSSplashAdFailed:(NSError*)error;
+- (void)ALSSplashAdClicked;
+- (void)ALSSplashAdJumpedFailed;
+- (void)ALSSplashAdIsShow;
+``` 
 
 ### <a name="sdkDemo">SDK Demo Download</a>
 1. [Download Demo](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsDemo.zip).
