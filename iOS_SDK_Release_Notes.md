@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.3.0  |      2020-03-04       | * remove UIWebivew; fix memory leak; |
 | 4.2.9  |      2020-02-21       | * new splash ad |
 | 4.2.8  |      2020-01-21       | * remove unused code |
 | 4.2.7  |      2020-01-14       | * fix bug on iOS13 |
