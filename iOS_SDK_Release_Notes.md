@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.3.2  |      2020-04-23       | * fix swift bug: fail to get rootViewController |
 | 4.3.1  |      2020-04-13       | * fix bug |
 | 4.3.0  |      2020-03-04       | * remove UIWebivew; fix memory leak; |
 | 4.2.9  |      2020-02-21       | * new splash ad |
