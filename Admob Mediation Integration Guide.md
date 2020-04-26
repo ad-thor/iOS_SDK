@@ -57,7 +57,7 @@
 
 ```
 Class Name: GADMBannerApplins (banner)
-Parameter: 260 (Applins slot id) 
+Parameter: xxx (Applins slot id) 
 ```
 
 -------
