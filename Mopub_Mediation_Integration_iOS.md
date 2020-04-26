@@ -64,12 +64,11 @@ Setup ALSRenderer For Native Ads.
 To register ApplinsSDK’s renderer for OC, use the following code:
 ```
     MPNativeAdRendererConfiguration *config = [ALSNativeRenderer rendererConfigurationWithRendererSettings:settings];
-    NSMutableArray * configurations = [NSMutableArray arrayWithObject:config];
-    MPNativeAdRequest *adRequest1 = [MPNativeAdRequest requestWithAdUnitIdentifier:self.info.ID rendererConfigurations:configurations];
 ```
+You can find sample code in MPNativeAdDetailViewController.m of MopubSampleApp.
 
 To register ApplinsSDK’s renderer for Swift, use the following code:
-Swift
 ```
     renderers.append(ALSNativeRenderer.rendererConfiguration(with: mopubRendererSettings))
 ```
+You can find sample code in NativeAdRendererManager.m of Canary.
