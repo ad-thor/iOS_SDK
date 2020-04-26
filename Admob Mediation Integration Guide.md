@@ -43,7 +43,7 @@
 
 #### 3. Create the Ad Unit in your Admob dashboard that corresponds to your Applins slot ID 
 
-![image](admob_3.png)
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_ad_units.png)
 
 -------
 
@@ -51,9 +51,9 @@
 
 ####  4. Add Applins custom event in Admob console, as below
 
-![image](admob_4.jpeg)
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_custom_event.jpeg)
 
-![image](admob_5.jpeg)
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_custom_event2.jpeg)
 
 ```
 Class Name: GADMAdapterApplins (example)
