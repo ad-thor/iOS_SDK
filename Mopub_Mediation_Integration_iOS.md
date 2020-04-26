@@ -30,7 +30,7 @@
 
 ### Step 4.Configuration on Mopub
 
-<img src="mopub_2.png" width = "500" height = "350" alt="图片名称" align=center />
+<img src="https://github.com/ad-thor/iOS_SDK/blob/master/img/mopub_configuration.png" width = "500" height = "350" alt="图片名称" align=center />
 
 ```
 'slotid':'number'
