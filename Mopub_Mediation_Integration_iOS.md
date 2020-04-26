@@ -65,10 +65,8 @@ To register ApplinsSDK’s renderer for OC, use the following code:
 ```
     MPNativeAdRendererConfiguration *config = [ALSNativeRenderer rendererConfigurationWithRendererSettings:settings];
 ```
-You can find sample code in MPNativeAdDetailViewController.m of MopubSampleApp.
 
 To register ApplinsSDK’s renderer for Swift, use the following code:
 ```
     renderers.append(ALSNativeRenderer.rendererConfiguration(with: mopubRendererSettings))
 ```
-You can find sample code in NativeAdRendererManager.m of Canary.
