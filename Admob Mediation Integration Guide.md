@@ -23,7 +23,7 @@
 
 > ADD APP
 
-![image](admob_1.jpeg)
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_new_app.jpeg)
 
 > ADD AD UNIT 
 
