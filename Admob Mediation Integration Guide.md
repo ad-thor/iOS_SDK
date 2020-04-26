@@ -35,7 +35,7 @@
 
 #### 2. Create Mediation Group, as below
 
-![image](admob_2.jpeg)
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_mediation_group.jpeg)
 
 ------
 
