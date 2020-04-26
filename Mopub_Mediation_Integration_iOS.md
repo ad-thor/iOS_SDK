@@ -55,7 +55,7 @@ Please import adapters in Swift-OC Bridging Header.
 #import "ALSNativeCustomEvent.h"
 #import "ALSNativeRenderer.h"
 #import "ALSNativeAdAdapter.h"
-#import "ALSBaseAdapterConfiguration.h"
+#import "ALSRewardedVideoCustomEvent.h"
 ```
 
 ## <a name="Docking">Native</a>
