@@ -47,3 +47,15 @@
 ![image](https://user-images.githubusercontent.com/13117454/35846975-b426c9cc-0b53-11e8-90f3-d6f0fd06b8b1.png)
 ===  
 
+## <a name="Docking">Swift</a>
+Please import adapters in Swift-OC Bridging Header.
+```
+#import "ALSBannerCustomEvent.h"
+#import "ALSInterstitialCustomEvent.h"
+#import "ALSNativeCustomEvent.h"
+#import "ALSNativeRenderer.h"
+#import "ALSNativeAdAdapter.h"
+#import "ALSBaseAdapterConfiguration.h"
+```
+
+## <a name="Docking">Native</a>
