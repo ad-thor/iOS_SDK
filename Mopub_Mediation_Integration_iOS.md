@@ -59,3 +59,16 @@ Please import adapters in Swift-OC Bridging Header.
 ```
 
 ## <a name="Docking">Native</a>
+Add ALSRenderer to configuration.
+
+OC
+```
+    MPNativeAdRendererConfiguration *config = [ALSNativeRenderer rendererConfigurationWithRendererSettings:settings];
+    NSMutableArray * configurations = [NSMutableArray arrayWithObject:config];
+    MPNativeAdRequest *adRequest1 = [MPNativeAdRequest requestWithAdUnitIdentifier:self.info.ID rendererConfigurations:configurations];
+```
+
+Swift
+```
+    renderers.append(ALSNativeRenderer.rendererConfiguration(with: mopubRendererSettings))
+```
