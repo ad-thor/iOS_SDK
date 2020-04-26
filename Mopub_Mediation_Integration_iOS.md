@@ -59,15 +59,16 @@ Please import adapters in Swift-OC Bridging Header.
 ```
 
 ## <a name="Docking">Native</a>
-Add ALSRenderer to configuration.
+Setup ALSRenderer For Native Ads.
 
-OC
+To register ApplinsSDK’s renderer for OC, use the following code:
 ```
     MPNativeAdRendererConfiguration *config = [ALSNativeRenderer rendererConfigurationWithRendererSettings:settings];
     NSMutableArray * configurations = [NSMutableArray arrayWithObject:config];
     MPNativeAdRequest *adRequest1 = [MPNativeAdRequest requestWithAdUnitIdentifier:self.info.ID rendererConfigurations:configurations];
 ```
 
+To register ApplinsSDK’s renderer for Swift, use the following code:
 Swift
 ```
     renderers.append(ALSNativeRenderer.rendererConfiguration(with: mopubRendererSettings))
