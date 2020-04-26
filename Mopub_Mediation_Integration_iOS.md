@@ -20,7 +20,7 @@
 ### Step 2. Put the ApplinsSDK folder into the project
 
 
- <img src="mopub_1.png" width = "500" height = "350" alt="图片名称" align=center />
+ <img src="https://github.com/ad-thor/iOS_SDK/blob/master/img/mopub_adapter.png" width = "500" height = "350" alt="图片名称" align=center />
 
 ### Step 3.Add a Network on Mopub
 
