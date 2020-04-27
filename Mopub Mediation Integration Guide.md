@@ -65,8 +65,10 @@ To register ApplinsSDK’s renderer for OC, use the following code:
 ```
     MPNativeAdRendererConfiguration *config = [ALSNativeRenderer rendererConfigurationWithRendererSettings:settings];
 ```
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/oc_render.jpg)
 
 To register ApplinsSDK’s renderer for Swift, use the following code:
 ```
     renderers.append(ALSNativeRenderer.rendererConfiguration(with: mopubRendererSettings))
 ```
+![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/swift_render.jpg)
