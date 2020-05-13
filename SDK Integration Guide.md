@@ -468,6 +468,8 @@ ALSAppWallDelegate interfaces related to Appwall, for more detail please check A
 ###  <a name="Splash">Adding the Splash Ad API in iOS</a>
 * You need to add your own launch screen first. Then preload and show Splash AD immediately after opening the app.
 ```
+#import <ApplinsSDK/ALSSplashAdDelegate.h>
+
 /**
 Preload Splash Ad
 Call this interface preload Splash AD.
@@ -516,6 +518,8 @@ Call this method after preloadSplashAd:delegate:Splash:customAdView:isTest  ad s
 /**
 Sample Code
 */
+#import <ApplinsSDK/ALSSplashAdDelegate.h>
+
 - (void)applicationWillEnterForeground:(UIApplication *)application {
 	[[Applins shareSDK] preloadSplashAd:@"Your slot ID" delegate:self customAdView:ad isTest:NO];
 }
