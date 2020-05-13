@@ -485,6 +485,7 @@ Call this interface preload Splash AD.
 /**
 Delegate
 */
+- (void)ALSSPlashAdSuccess;
 - (void)ALSSplashAdFailed:(NSError*)error;
 - (void)ALSSplashAdClicked;
 - (void)ALSSplashAdJumpedFailed;
