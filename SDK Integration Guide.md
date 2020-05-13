@@ -492,7 +492,7 @@ Delegate
 - (void)ALSSplashAdIsShow;
 ``` 
 
-* Preload and show step by step.
+* Preload and show step by step. Control loading time and launch screen by your self.
 
 ```
 /**
