@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.3.4  |      2020-05-16       | * add splash interface |
 | 4.3.3  |      2020-04-30       | * new ad source |
 | 4.3.2  |      2020-04-23       | * fix swift bug: fail to get rootViewController |
 | 4.3.1  |      2020-04-13       | * fix bug |
