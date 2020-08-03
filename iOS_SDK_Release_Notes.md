@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.3.7  |      2020-08-03       | * iOS14 compatibility
 | 4.3.6  |      2020-07-15       | * native impression callback
 | 4.3.5  |      2020-07-10       | * new ad source, optimize revenue|
 | 4.3.4  |      2020-05-16       | * add splash interface |
