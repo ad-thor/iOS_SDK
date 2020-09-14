@@ -2,7 +2,10 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
-| 4.4.1  |      2020-08-29       | * fix mraid ad bug
+| 4.4.1  |      2020-08-29       | * remove unused code
+| 4.4.0  |      2020-08-26       | * fix mraid ad bug
+| 4.3.9  |      2020-08-10       | * BSSID
+| 4.3.8  |      2020-08-10       | * Custom Version for key account
 | 4.3.7  |      2020-08-03       | * iOS14 compatibility
 | 4.3.6  |      2020-07-15       | * native impression callback
 | 4.3.5  |      2020-07-10       | * new ad source, optimize revenue|
