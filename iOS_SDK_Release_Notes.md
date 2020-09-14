@@ -2,6 +2,7 @@
 
 | Version | Release          Date | Notes                                                        |
 | :------ | :-------------------: | :----------------------------------------------------------- |
+| 4.4.1  |      2020-08-29       | * fix mraid ad bug
 | 4.3.7  |      2020-08-03       | * iOS14 compatibility
 | 4.3.6  |      2020-07-15       | * native impression callback
 | 4.3.5  |      2020-07-10       | * new ad source, optimize revenue|
