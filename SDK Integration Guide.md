@@ -3,8 +3,8 @@
 - [Before You Start](#start)
 - [SDK Set Up Use CocoaPods](#step1)
 - [Integration SDK](#step2)
-  - [GDPR](#gdpr)
-  - [COPPA](#coppa)
+  - [GDPR](optional)(#gdpr)
+  - [COPPA](optional)(#coppa)
   - [Initialization](#init)
   - [Native](#native)
   - [Native Video](#nativevideo)
@@ -33,8 +33,8 @@
 
 ## <a name="step2">Integration SDK</a>
 
-### <a name="gdpr">GDPR </a> 
-* Use this interface to upload consent from affected users.
+### <a name="gdpr">GDPR(Optional) </a> 
+* If there are no special privacy requirements, you can skip this chapter. Use this interface to upload consent from affected users.
 ```
 /**
  For GDPR
@@ -55,7 +55,8 @@
 	1.If SDK don't gather the user informatian ,you probably get no fill.
 	2.It is recommended that obtaining the user's consent before SDK initialization.
 
-### <a name="coppa">Child-Oriented(COPPA)</a> 
+### <a name="coppa">Child-Oriented(COPPA) (Optional)</a> 
+* If there are no special privacy requirements, you can skip this chapter.
 * In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.	Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
 ```
      //child-oriented
