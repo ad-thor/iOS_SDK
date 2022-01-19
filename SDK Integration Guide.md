@@ -18,7 +18,7 @@
 ## <a name="start">Prerequisites</a>
 
 - Use Xcode 10.0 or higher
-- Target iOS 8.0 or higher
+- Target iOS 9.0 or higher
 
 ## <a name="step1">Import the Mobile Ads SDK </a>
 
