@@ -76,8 +76,7 @@
 	2.It is recommended that obtaining the user's consent before SDK initialization.	
 	
 ### <a name="init">SDK initializion</a> 
-- Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.
-
+- Add the `NSAllowsArbitraryLoads` to your app's Info.plist file to disable ATS restrictions.Because there are still some third-party advertisements click or impression url using http protocol.
 ```
 <key>NSAppTransportSecurity</key>
 <dict>
