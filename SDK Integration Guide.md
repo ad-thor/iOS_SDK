@@ -33,6 +33,11 @@
 
 ## <a name="step2">Integration SDK</a>
 
+* Using https for data privacy
+```
+[[Applins shareSDK] setSchemaHttps];
+```
+
 ### <a name="gdpr">GDPR(Optional) </a> 
 * If there are no special privacy requirements, you can skip this chapter. Use this interface to upload consent from affected users.
 ```
@@ -78,12 +83,7 @@
 ```
 
 * Under "Build Settings->Other Linker Flags" add: "-ObjC"
-* Using https for data privacy
-```
-[[Applins shareSDK] setSchemaHttps];
-```
-
-// Initialize Applins SDK
+* Initialize Applins SDK
   [[Applins shareSDK] initSDK:@"Your Slot ID"];
   
 * Initialize Applins SDK in your didFinishLaunchingWithOptions method.
