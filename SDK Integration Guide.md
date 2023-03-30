@@ -4,6 +4,7 @@
 - [SDK Set Up Use CocoaPods](#step1)
 - [Integration SDK](#step2)
   - [Data Privacy](#privacy)
+   	- [Https](#https)
   	- [GDPR(optional)](#gdpr)
   	- [COPPA(optional)](#coppa)
   - [Initialization](#init)
@@ -35,8 +36,8 @@
 ## <a name="step2">Integration SDK</a>
 
 ### <a name="privacy">Data Privacy(Optional) </a> 
-
-* Using https for data privacy
+#### <a name="https">Https </a> 
+* Use https to ensure data security
 ```
 [[Applins shareSDK] setSchemaHttps];
 ```
