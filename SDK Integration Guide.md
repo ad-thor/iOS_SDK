@@ -83,9 +83,7 @@
 ```
 
 * Under "Build Settings->Other Linker Flags" add: "-ObjC"
-* Initialize Applins SDK
-  [[Applins shareSDK] initSDK:@"Your Slot ID"];
-  
+
 * Initialize Applins SDK in your didFinishLaunchingWithOptions method.
 
 ```
