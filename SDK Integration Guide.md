@@ -78,6 +78,14 @@
 ```
 
 * Under "Build Settings->Other Linker Flags" add: "-ObjC"
+* Using https for data privacy
+```
+[[Applins shareSDK] setSchemaHttps];
+```
+
+// Initialize Applins SDK
+  [[Applins shareSDK] initSDK:@"Your Slot ID"];
+  
 * Initialize Applins SDK in your didFinishLaunchingWithOptions method.
 
 ```
