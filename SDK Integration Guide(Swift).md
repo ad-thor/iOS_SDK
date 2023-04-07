@@ -91,6 +91,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool 	
 	{
         	// Initialize Applins SDK
+		Applins.shareSDK().setSchemaHttps();
   		Applins.shareSDK().initSDK("Your Slot ID")
         	return true
 	}
