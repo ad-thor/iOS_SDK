@@ -56,7 +56,9 @@
 ![image](https://github.com/ad-thor/iOS_SDK/blob/master/img/admob_custom_event2.jpeg)
 
 ```
-Class Name: GADMBannerApplins (banner)
+Class Name: GADMBannerApplins (banner) 
+            GADMInterstitialApplins(interstitial) 
+            GADMRewardedVideoAdapterApplins(Rewarded Video)
 Parameter: xxx (Applins slot id) 
 ```
 
