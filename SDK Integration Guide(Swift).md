@@ -12,6 +12,7 @@
   - [Dynamic Interstitial](#interstitial)
   - [Rewarded Video](#rewardedvideo)
 - [SDK Demo Download](#sdkDemo)
+- [Mediation](#mediation)
 - [Error Code For SDK](#error)
 ## <a name="start">Prerequisites</a>
 
@@ -228,6 +229,11 @@ func alsRewardedName(_ rewardName: String!, rewardedAmount: String!, customParam
 ### <a name="sdkDemo">SDK Swift Demo Download</a>
 1. [Download Demo](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSwiftDemo.zip).
 2. [import SDK Framework](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSDK.framework.zip)
+
+### <a name="mediation">Mediation</a>
+[Admob Adapter] (https://github.com/ad-thor/iOS_SDK/blob/master/iOS_ApplinsSDK%20_Adapter_For_Admob.zip)
+[Admob Guide] (https://github.com/ad-thor/iOS_SDK/blob/master/Admob%20Mediation%20Integration%20Guide.md)
+[Max Adapter] Coming soon
 
 ## <a name="error">Error Code For SDK</a>
 Error codes could be obtained from delegate method.
