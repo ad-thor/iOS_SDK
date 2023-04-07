@@ -41,6 +41,9 @@
 ```
 [[Applins shareSDK] setSchemaHttps];
 ```
+```
+Applins.shareSDK().setSchemaHttps();
+```
 
 #### <a name="gdpr">GDPR(Optional) </a> 
 * If there are no special privacy requirements, you can skip this chapter. Use this interface to upload consent from affected users.
@@ -60,6 +63,10 @@
    [[Applins shareSDK] uploadConsentValue:@"yes" consentType:@"GDPR" complete:^(BOOL state) {
     }];
 ```
+```
+    Applins.shareSDK().uploadConsentValue("yes", consentType: "GDPR") { success in
+    }
+```
 * Warning:
 	1.If SDK don't gather the user informatian ,you probably get no fill.
 	2.It is recommended that obtaining the user's consent before SDK initialization.
@@ -70,7 +77,10 @@
 ```
      //child-oriented
      [[Applins shareSDK] setIsChildDirected:NO];
-```     
+```
+```
+     Applins.shareSDK().setIsChildDirected(false)
+```
 * Warning
 	1.If SDK don't gather the user informatian ,you probably get no fill.
 	2.It is recommended that obtaining the user's consent before SDK initialization.	
@@ -105,7 +115,9 @@
 
 @end
 ```
-
+```
+   Applins.shareSDK().initSDK("Your Slot ID")
+```
 
 ### <a name="native">Adding the Native Ad API in iOS</a>
 We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK could send impression and track without developer's concern.
@@ -304,6 +316,27 @@ Applies SDK supports three ad sizes banner to be used in your APP.
 }
 
 ```
+```
+    Applins.shareSDK().getBannerAD("31840716", delegate: self, adSize: ALSBannerSizeW320H50, isTest: false)
+    //banner delegate
+    func alsLoadBannerSuccess(_ adView: ALSADMRAIDView!) {
+        self.view.addSubview(adView)
+        adView.frame = CGRectMake(25, 500, 320, 50)
+    }
+    
+    //banner and interstiail delegate
+    func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
+        NSLog("%@%@", "loadADFailedWithError: " , error.localizedDescription)
+    }
+    
+    func alsAdViewShow(_ adView: ALSADMRAIDView!) {
+        NSLog("%@%@", "impression ad slotid: " , adView.slot)
+    }
+    
+    func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
+        NSLog("%@%@", "click ad slotid: " , adView.slot)
+    }
+```
 
 ### <a name="interstitial">Adding Dynamic Interstitial Ad API in iOS</a>
 
@@ -352,6 +385,30 @@ ALSAdViewDelegate interfaces related to interstitial, for more detail please che
 
 }
 
+```
+```
+    Applins.shareSDK().preloadInterstitialAd("43853666", delegate: self, isTest: false)
+
+
+    //interstitial delegate
+    func alsLoadInterstitialSuccess(withSlot slot: String!) {
+        if Applins.shareSDK().isInterstitialReady(){
+            Applins.shareSDK().showInterstitialAD()
+        }
+    }
+    
+    //banner and interstiail delegate
+    func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
+        NSLog("%@%@", "loadADFailedWithError: " , error.localizedDescription)
+    }
+    
+    func alsAdViewShow(_ adView: ALSADMRAIDView!) {
+        NSLog("%@%@", "impression ad slotid: " , adView.slot)
+    }
+    
+    func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
+        NSLog("%@%@", "click ad slotid: " , adView.slot)
+    }
 ```
 
 ###  <a name="rewardedvideo">Adding the RewardedVideo Ad API in iOS</a>
@@ -416,7 +473,37 @@ ALS Reward video is ready to play
 }
     
 ```
+```
+Applins.shareSDK().preloadRewardedVideoAD("34159155", delegate: self)
+    //rewarded video delegate
+    func alsRewardedVideoLoadSuccess(){
+        if Applins.shareSDK().isRewardedVideoReady(){
+            Applins.shareSDK().showRewardedVideo()
+        }
+    }
+    
+    func alsRewardVideoLoadingFailed(_ error: Error!) {
+        NSLog("%@", error.localizedDescription)
+    }
+    
+    func alsRewardedVideoStart() {
+        NSLog("%@", "alsRewardedVideoStart")
+    }
+    
+    func alsRewardedVideoFinish() {
+        NSLog("%@", "alsRewardedVideoFinish")
+    }
+    
+    func alsRewardedVideoClicked() {
+        NSLog("%@", "alsRewardedVideoClicked")
+    }
+    
+    //reward user in the function
+    func alsRewardedName(_ rewardName: String!, rewardedAmount: String!, customParams: String!) {
+        NSLog("%@%@%@%@", "RewardedItmeName:", rewardName, " ,rewardedAmount:", rewardedAmount)
+    }
 
+```
 
 ### <a name="Appwall">Adding the Appwall Ad API in iOS</a>
 
