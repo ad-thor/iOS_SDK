@@ -231,9 +231,9 @@ Applins.shareSDK().preloadRewardedVideoAD("34159155", delegate: self)
     }
 ```
 
-### <a name="sdkDemo">SDK Demo Download</a>
-1. [Download Demo](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsDemo.zip).
-2. Run 'pod update' in terminal.
+### <a name="sdkDemo">SDK Swift Demo Download</a>
+1. [Download Demo](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSwiftDemo.zip).
+2. [import SDK Framework](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsSDK.framework.zip)
 
 ## <a name="error">Error Code For SDK</a>
 Error codes could be obtained from delegate method.
