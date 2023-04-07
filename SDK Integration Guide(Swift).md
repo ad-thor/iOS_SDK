@@ -48,12 +48,8 @@ Applins.shareSDK().setSchemaHttps();
  @param consentType   content type is the agreement name you signed with users
  @param complete      state
  */
-- (void)uploadConsentValue:(NSString *)consentValue
-	       consentType:(NSString *)consentType
-		  complete:(void(^)(BOOL state))complete;
-	
-	
-    Applins.shareSDK().uploadConsentValue("yes", consentType: "GDPR") { success in
+
+ Applins.shareSDK().uploadConsentValue("yes", consentType: "GDPR") { success in
     }
 ```
 
@@ -87,8 +83,8 @@ Applins.shareSDK().setSchemaHttps();
 * Initialize Applins SDK in your didFinishLaunchingWithOptions method.
 
 ```
-#import <ApplinsSDK/ApplinsSDK.h>
-…
+import ApplinsSDK
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate
 {
@@ -122,27 +118,26 @@ Applies SDK supports three ad sizes banner to be used in your APP.
  @param isTest          Use test advertisement or not
  */
 
-- (void)getBannerAD:(NSString*)slotid delegate:(id)delegate adSize:(ALSBannerSize)size isTest:(BOOL)isTest;
-
-    Applins.shareSDK().getBannerAD("31840716", delegate: self, adSize: ALSBannerSizeW320H50, isTest: false)
-    //banner delegate
-    func alsLoadBannerSuccess(_ adView: ALSADMRAIDView!) {
-        self.view.addSubview(adView)
-        adView.frame = CGRectMake(25, 500, 320, 50)
-    }
+Applins.shareSDK().getBannerAD("31840716", delegate: self, adSize: ALSBannerSizeW320H50, isTest: false)
     
-    //banner and interstiail delegate
-    func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
+//banner delegate
+func alsLoadBannerSuccess(_ adView: ALSADMRAIDView!) {
+	self.view.addSubview(adView)
+	adView.frame = CGRectMake(25, 500, 320, 50)
+}
+    
+//banner and interstiail delegate
+func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
         NSLog("%@%@", "loadADFailedWithError: " , error.localizedDescription)
-    }
+}
     
-    func alsAdViewShow(_ adView: ALSADMRAIDView!) {
+func alsAdViewShow(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "impression ad slotid: " , adView.slot)
-    }
+}
     
-    func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
+func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "click ad slotid: " , adView.slot)
-    }
+}
 
 ```
 
@@ -159,29 +154,29 @@ Call this interface preload Interstitial AD.
 @param isTest          Use test advertisement or not
 */
 
-    Applins.shareSDK().preloadInterstitialAd("YOUR SLOT ID", delegate: self, isTest: false)
+Applins.shareSDK().preloadInterstitialAd("YOUR SLOT ID", delegate: self, isTest: false)
 
 
-    //interstitial delegate
-    //interstitial is ready, call mraidInterstitialShow to show.
-    func alsLoadInterstitialSuccess(withSlot slot: String!) {
+//interstitial delegate
+//interstitial is ready, call mraidInterstitialShow to show.
+func alsLoadInterstitialSuccess(withSlot slot: String!) {
         if Applins.shareSDK().isInterstitialReady(){
             Applins.shareSDK().showInterstitialAD()
         }
-    }
+}
     
-    //banner and interstiail delegate
-    func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
-        NSLog("%@%@", "loadADFailedWithError: " , error.localizedDescription)
-    }
+//banner and interstiail delegate
+func alsAdView(_ adView: ALSADMRAIDView!, loadADFailedWithError error: Error!) {
+	NSLog("%@%@", "loadADFailedWithError: " , error.localizedDescription)
+}
     
-    func alsAdViewShow(_ adView: ALSADMRAIDView!) {
+func alsAdViewShow(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "impression ad slotid: " , adView.slot)
-    }
+}
     
-    func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
+func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "click ad slotid: " , adView.slot)
-    }
+}
 
 ```
 
@@ -195,36 +190,38 @@ First you should call (preloadRewardedVideoAD:delegate:) method get RewardVideo 
 @param slot_id         Rewarded Video slot ID
 @param delegate        Set Delegate of Ads event (<ALSRewardVideoDelegate>)
 */
-Applins.shareSDK().preloadRewardedVideoAD("34159155", delegate: self)
 
-    //rewarded video delegate
-    //rewarded video is ready to show
-    func alsRewardedVideoLoadSuccess(){
+Applins.shareSDK().preloadRewardedVideoAD("YOUR SLOT ID", delegate: self)
+
+//rewarded video delegate
+//rewarded video is ready to show
+func alsRewardedVideoLoadSuccess(){
         if Applins.shareSDK().isRewardedVideoReady(){
             Applins.shareSDK().showRewardedVideo()
         }
-    }
-    //rewared video load failed
-    func alsRewardVideoLoadingFailed(_ error: Error!) {
+}
+
+//rewared video load failed
+func alsRewardVideoLoadingFailed(_ error: Error!) {
         NSLog("%@", error.localizedDescription)
-    }
+}
     
-    func alsRewardedVideoStart() {
+func alsRewardedVideoStart() {
         NSLog("%@", "alsRewardedVideoStart")
-    }
+}
     
-    func alsRewardedVideoFinish() {
+func alsRewardedVideoFinish() {
         NSLog("%@", "alsRewardedVideoFinish")
-    }
+}
     
-    func alsRewardedVideoClicked() {
+func alsRewardedVideoClicked() {
         NSLog("%@", "alsRewardedVideoClicked")
-    }
+}
     
-    //reward user in the function
-    func alsRewardedName(_ rewardName: String!, rewardedAmount: String!, customParams: String!) {
+//reward user in the function
+func alsRewardedName(_ rewardName: String!, rewardedAmount: String!, customParams: String!) {
         NSLog("%@%@%@%@", "RewardedItmeName:", rewardName, " ,rewardedAmount:", rewardedAmount)
-    }
+}
 ```
 
 ### <a name="sdkDemo">SDK Swift Demo Download</a>
