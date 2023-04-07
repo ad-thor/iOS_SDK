@@ -16,6 +16,7 @@
   - [AppWall](#Appwall)
   - [Splash](#Splash)
 - [SDK Demo Download](#sdkDemo)
+- [Mediation](#mediation)
 - [Error Code For SDK](#error)
 ## <a name="start">Prerequisites</a>
 
@@ -552,6 +553,11 @@ Sample Code
 ### <a name="sdkDemo">SDK Demo Download</a>
 1. [Download Demo](https://github.com/ad-thor/iOS_SDK/blob/master/ApplinsDemo.zip).
 2. Run 'pod update' in terminal.
+
+### <a name="mediation">Mediation</a>
+1. [Admob Adapter] (https://github.com/ad-thor/iOS_SDK/blob/master/iOS_ApplinsSDK%20_Adapter_For_Admob.zip)
+2. [Admob Guide] (https://github.com/ad-thor/iOS_SDK/blob/master/Admob%20Mediation%20Integration%20Guide.md)
+3. [Max Adapter] Coming soon
 
 ## <a name="error">Error Code For SDK</a>
 Error codes could be obtained from delegate method.
