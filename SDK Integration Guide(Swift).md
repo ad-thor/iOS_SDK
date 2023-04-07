@@ -7,14 +7,10 @@
    	- [Https](#https)
   	- [GDPR(optional)](#gdpr)
   	- [COPPA(optional)](#coppa)
-  - [Initialization](#init)
-  - [Native](#native)
-  - [Native Video](#nativevideo)
+  - [Initialization](#init)\
   - [Banner](#banner)
   - [Dynamic Interstitial](#interstitial)
   - [Rewarded Video](#rewardedvideo)
-  - [AppWall](#Appwall)
-  - [Splash](#Splash)
 - [SDK Demo Download](#sdkDemo)
 - [Error Code For SDK](#error)
 ## <a name="start">Prerequisites</a>
