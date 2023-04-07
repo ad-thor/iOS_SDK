@@ -39,9 +39,6 @@
 #### <a name="https">Https </a> 
 * Use https to ensure data security
 ```
-[[Applins shareSDK] setSchemaHttps];
-```
-```
 Applins.shareSDK().setSchemaHttps();
 ```
 
@@ -60,13 +57,10 @@ Applins.shareSDK().setSchemaHttps();
 		  complete:(void(^)(BOOL state))complete;
 	
 	
-   [[Applins shareSDK] uploadConsentValue:@"yes" consentType:@"GDPR" complete:^(BOOL state) {
-    }];
-```
-```
     Applins.shareSDK().uploadConsentValue("yes", consentType: "GDPR") { success in
     }
 ```
+
 * Warning:
 	1.If SDK don't gather the user informatian ,you probably get no fill.
 	2.It is recommended that obtaining the user's consent before SDK initialization.
@@ -76,9 +70,6 @@ Applins.shareSDK().setSchemaHttps();
 * In order to comply with the provisions of the Children's Online Privacy Protection Act (COPPA), we provide the setIsChildDirected interface.	Developers can use this interface to indicate that your content is child-oriented. We will stop personalized advertising and put in advertisements suitable for children，which may result in no filling.
 ```
      //child-oriented
-     [[Applins shareSDK] setIsChildDirected:NO];
-```
-```
      Applins.shareSDK().setIsChildDirected(false)
 ```
 * Warning
@@ -102,173 +93,17 @@ Applins.shareSDK().setSchemaHttps();
 ```
 #import <ApplinsSDK/ApplinsSDK.h>
 …
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication *)application
-    didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-
-  // Initialize Applins SDK
-  [[Applins shareSDK] initSDK:@"Your Slot ID"];
-  return YES;
-}
-
-@end
-```
-```
-   Applins.shareSDK().initSDK("Your Slot ID")
-```
-
-### <a name="native">Adding the Native Ad API in iOS</a>
-We recommend that you add a AD view which inherits from ALSNativeAd. So the SDK could send impression and track without developer's concern.
-
-```
-@interface NativeADView : ALSNativeAd
-- (void)setValuesWith:(ALSNativeAdModel *)model;
-@end
-```
-Add an interface to assign AD model to AD view.
-```
-@implementation NativeADView
-
-- (void)setValuesWith:(ALSNativeAdModel *model){
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
+	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool 	
+	{
+        	// Initialize Applins SDK
+  		Applins.shareSDK().initSDK("Your Slot ID")
+        	return true
+	}
 }
 @end
-```
-Here're the interfaces to get ads.
-```
- /**
- We recommend the AD View inherits ALSNative.
- Get the nativeModel assigned to AD view and setting up layout in it.
- 
- @param slot_id         Native AD ID
- @param delegate        Set Delegate of Ad event(<ALSNativeAdDelegate>)
- @param WHRate          Set Image Rate
- @param isTest          Use test advertisement or not
- @param success         The request is successful Block, return Native Element Ad
- @param failure         The request failed Block, retuen error
- */
-- (void)getNativeAD:(NSString *)slot_id
-                      delegate:(id)delegate
-           imageRate:(ALSImageWHRate)WHRate
-                        isTest:(BOOL)isTest
-                       success:(void (^)(ALSNativeAdModel *nativeModel))success
-                       failure:(void (^)(NSError *error))failure;
-
-
-/**
- Preload native ADs with image
- Using inheritance ALSNativeAd advertising View customize layout, in prior to add to the parent View will return to the frame and successful nativeModel assigned to a custom View.
- 
- @param slot_id         Native AD ID
- @param delegate        Set Delegate of Ad event(<ALSNativeAdDelegate>)
- @param WHRate          Set Image Rate
- @param preloadImage    preload AD images if afferent YES
- @param isTest          Use test advertisement or not
- @param success         The request is successful Block, return Native Element Ad
- @param failure         The request failed Block, retuen error
- */
-- (void)preloadNativeAD:(NSString *)slot_id
-               delegate:(id)delegate
-              imageRate:(ALSImageWHRate)WHRate
-           preloadImage:(BOOL)preloadImage
-                 isTest:(BOOL)isTest
-                success:(void (^)(ALSNativeAdModel *nativeModel))success
-                failure:(void (^)(NSError *error))failure;
-/**
- Get Keywords Element Native ADs
- Using inheritance ALSNativeAd advertising View customize layout, in prior to add to the parent View will return to the frame and successful nativeModel assigned to a custom View.
- 
- @param slot_id         Native AD ID
- @param delegate        Set Delegate of Ad event(<ALSNativeAdDelegate>)
- @param WHRate          Set Image Rate
- @param cat             ad type
- @param keyWords        Set Ad Keywords
- @param isTest          Use test advertisement or not
- @param success         The request is successful Block, return Native Element Ad
- @param failure         The request failed Block, retuen error
- */
-- (void)getNativeADwithCatogaryOrKeywords:(NSString *)slot_id
-                      delegate:(id)delegate
-           imageRate:(ALSImageWHRate)WHRate
-                         adcat:(NSInteger)cat
-                      keyWords:(NSArray *)keyWords
-                        isTest:(BOOL)isTest
-                       success:(void (^)(ALSNativeAdModel *nativeModel))success
-                       failure:(void (^)(NSError *error))failure;
-
-
-/**
- Get Multiterm Element Native ADs
- Using inheritance ALSNativeAd advertising View customize layout, in prior to add to the parent View will return to the frame and successful nativeModel assigned to a custom View.
- 
- @param slot_id         Native AD ID
- @param num             Ad numbers
- @param delegate        Set Delegate of Ad event(<ALSNativeAdDelegate>)
- @param WHRate          Set Image Rate
- @param isTest          Use test advertisement or not
- @param success         The request is successful Block, return Native Element Ad
- @param failure         The request failed Block, retuen error
- */
--(void)getMultiNativeADs:(NSString *)slot_id
-               adNumbers:(NSInteger)num
-                delegate:(id)delegate
-                imageRate:(ALSImageWHRate)WHRate
-                   isTest:(BOOL)isTest
-                  success:(void (^)(NSArray *nativeArr))success
-                  failure:(void (^)(NSError *error))failure;
-
-```
-
-### <a name="nativevideo">Adding the Native Video Ad API in iOS</a>
-
-```
-/**
- Get Native video Ad
- Call this interface to get Native Video AD.
- 
- @param slot_id         Native Video slot ID
- @param delegate        Set Delegate of Ads event (<ALSNativeVideoDelegate>)
- @param WHRate          Set Image Rate
- @param isTest          Use test advertisement or not
- */
-- (void)getNativeVideoAD:(NSString*)slot_id
-                delegate:(id)delegate
-               imageRate:(ALSImageWHRate)WHRate
-                  isTest:(BOOL)isTest;
-			  
-#ALSNativeVideoDelegate Callback Delegate
-/**
- * Advertisement load success.
- */
--(void)ALSNativeVideoLoadSuccess:(ALSNativeVideoModel *)nativeVideoModel{
-	//save model
-	self.nativeVideoModel = nativeVideoModel
-	//add mediaview, width:height = 1.77:1
-    	ALSMediaView *mediaView = [[ALSMediaView alloc] initWithFrame:CGRectMake(x, y, width, width/1.77)];
-    	mediaView.EnableAutoPlay = NO;   //auto control play/pause
-    	mediaView.EnableWWANPlay = YES;  //play video via 3g/4g
-    	[mediaView setNativeVideoAd:nativeVideoModel];
-    	[self.view addSubview:self.mediaView];
-    	//add title
-    	self.nvTitleLable.text = nativeVideoModel.title;
-    	//add desc
-    	self.nvDescLable.text = nativeVideoModel.desc;
-    	//add logo
-    	self.nvLogo.image = self.nativeVideoModel.ADsignImage;
-    	//add click
-     	UITapGestureRecognizer *jumpGesture = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(clickAD)];
-     	[self.mediaView addGestureRecognizer:jumpGesture];
-}
-
-- (void)clickAD{
-   	[self.nativeVideoModel clickToPresentOnParentVC:self animated:YES completion:nil];
-}
-
-/**
- * Advertisement load failed.
- */
--(void)ALSNativeVideoLoadFailed:(NSError *)error;
 ```
 
 ### <a name="banner">Adding the Banner Ad API in iOS</a>
@@ -293,30 +128,6 @@ Applies SDK supports three ad sizes banner to be used in your APP.
 
 - (void)getBannerAD:(NSString*)slotid delegate:(id)delegate adSize:(ALSBannerSize)size isTest:(BOOL)isTest;
 
-#ALSAdViewDelegate interfaces related to interstitial, for more detail please check ALSAdViewDelegate in ALSADMRAIDView.h
-
-//banner ad
-- (void)ALSLoadBannerSuccess:(ALSADMRAIDView*)adView{
-        [self.view addSubview adView];
-}
-	
-//error while request ads. (share the same error delegate interface with interstitial)
-- (void)ALSAdView:(ALSADMRAIDView*)adView loadADFailedWithError:(NSError*)error{
-
-}
-
-//click ad
-- (void)ALSAdViewClicked:(ALSADMRAIDView *)adView{
-
-}
-
-//mraid ad show
-- (void)ALSAdViewShow:(ALSADMRAIDView*)adView {
-
-}
-
-```
-```
     Applins.shareSDK().getBannerAD("31840716", delegate: self, adSize: ALSBannerSizeW320H50, isTest: false)
     //banner delegate
     func alsLoadBannerSuccess(_ adView: ALSADMRAIDView!) {
@@ -336,7 +147,9 @@ Applies SDK supports three ad sizes banner to be used in your APP.
     func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "click ad slotid: " , adView.slot)
     }
+
 ```
+
 
 ### <a name="interstitial">Adding Dynamic Interstitial Ad API in iOS</a>
 
@@ -349,48 +162,12 @@ Call this interface preload Interstitial AD.
 @param delegate        Set Delegate of Ads event (<ALSAdViewDelegate>)
 @param isTest          Use test advertisement or not
 */
-- (void)preloadInterstitialAd:(NSString *)slotid delegate:(id)delegate isTest:	(BOOL)isTest;
 
-/**
-Show interstitial ad
-Call this method after preload Interstitial ad success
-*/
-- (void)showInterstitialAD;
-
-/**
-Check interstitial ad to be Ready
-Call this method before show ad
-*/
-- (BOOL)isInterstitialReady;
-
-
-ALSAdViewDelegate interfaces related to interstitial, for more detail please check ALSAdViewDelegate in ALSADMRAIDView.h
-//interstitial is ready, call mraidInterstitialShow to show it.
-- (void)ALSLoadInterstitialSuccessWithSlot:(NSString *)slot {
-	[[Applins shareSDK] showInterstitialAD];
-}
-
-//error while request ads. (share the same error delegate interface with banner)
-- (void)ALSAdView:(ALSADMRAIDView*)adView loadADFailedWithError:(NSError*)error{
-
-}
-
-//click ad
-- (void)ALSAdViewClicked:(ALSADMRAIDView *)adView{
-
-}
-
-//mraid ad show
-- (void)ALSAdViewShow:(ALSADMRAIDView*)adView {
-
-}
-
-```
-```
-    Applins.shareSDK().preloadInterstitialAd("43853666", delegate: self, isTest: false)
+    Applins.shareSDK().preloadInterstitialAd("YOUR SLOT ID", delegate: self, isTest: false)
 
 
     //interstitial delegate
+    //interstitial is ready, call mraidInterstitialShow to show.
     func alsLoadInterstitialSuccess(withSlot slot: String!) {
         if Applins.shareSDK().isInterstitialReady(){
             Applins.shareSDK().showInterstitialAD()
@@ -409,6 +186,7 @@ ALSAdViewDelegate interfaces related to interstitial, for more detail please che
     func alsAdViewClicked(_ adView: ALSADMRAIDView!) {
         NSLog("%@%@", "click ad slotid: " , adView.slot)
     }
+
 ```
 
 ###  <a name="rewardedvideo">Adding the RewardedVideo Ad API in iOS</a>
@@ -416,72 +194,21 @@ ALSAdViewDelegate interfaces related to interstitial, for more detail please che
 ```     
 /**
 Get RewardVideo Ad
-First you should call (preloadRewardedVideoAD:delegate:) method get RewardVideo Ad！Then On his return to the success of the proxy method invokes the （showRewardedVideo） method
+First you should call (preloadRewardedVideoAD:delegate:) method get RewardVideo Ad！Then On his return to the success of the delegate method invokes the （showRewardedVideo） method
  	
 @param slot_id         Rewarded Video slot ID
 @param delegate        Set Delegate of Ads event (<ALSRewardVideoDelegate>)
 */
-- (void)preloadRewardedVideoAD:(NSString *)slot_id delegate:(id)delegate;
-
-/**
-show RewardVideo      // We recommendation use [ 	showRewardedVideoWithCustomViewController: ] interface !
-*/
-- (void)showRewardedVideo;
-
-/**
-show RewardVideo
-@param viewController The view controller on which the interstitial will display
-*/
-- (void)showRewardedVideoWithCustomViewController:(UIViewController *)viewController;
-
-/**
-ALS Reward video is ready to play
-@return YES:you can call show rewardvideo interface / NO:don't call show rewardvideo interface 
-*/
-- (BOOL)isRewardedVideoReady;
-
-
-#RewardVideoDelegate delegate callback interface
-- (void)ALSRewardedVideoLoadSuccess {
-	if([[Applins shareSDK] isRewardedVideoReady])
-		[[Applins shareSDK] showRewardedVideo];
-	NSLog(@"rewarded vidoe load success, call showRewardedVideo");
-}                       
-- (void)ALSRewardedVideoStart {
-	NSLog(@"rewarded video starts to play");
-}
-- (void)ALSRewardedVideoFinish {
-	NSLog(@"rewarded video complete-this is called after a full video view,before end card is shown");
-} 
-- (void)ALSRewardedVideoClicked {
-	NSLog(@"rewarded video clicked");
-}
-- (void)ALSRewardedVideoWillJumpToAppStore {
-	NSLog(@"users click reward video and leave application");
-} 
-- (void)ALSRewardedVideoJumpFailed {
-	NSLog(@"reward video click and failed jumping to App Store");
-}
-- (void)ALSRewardVideoLoadingFailed:(NSError *)error {
-	NSLog(@"rewarded video request failed ");
-}
-- (void)ALSRewardVideoClosed {
-	NSLog(@"rewarded video ad closed-this can be triggered by closing the end card");
-}
-- (void)ALSRewardedName:(NSString *)rewardName rewardedAmount:(NSString *)rewardedAmount customParams:(NSString*) customParams {
-        NSLog(@"give reward to the users interface");
-}
-    
-```
-```
 Applins.shareSDK().preloadRewardedVideoAD("34159155", delegate: self)
+
     //rewarded video delegate
+    //rewarded video is ready to show
     func alsRewardedVideoLoadSuccess(){
         if Applins.shareSDK().isRewardedVideoReady(){
             Applins.shareSDK().showRewardedVideo()
         }
     }
-    
+    //rewared video load failed
     func alsRewardVideoLoadingFailed(_ error: Error!) {
         NSLog("%@", error.localizedDescription)
     }
@@ -502,127 +229,6 @@ Applins.shareSDK().preloadRewardedVideoAD("34159155", delegate: self)
     func alsRewardedName(_ rewardName: String!, rewardedAmount: String!, customParams: String!) {
         NSLog("%@%@%@%@", "RewardedItmeName:", rewardName, " ,rewardedAmount:", rewardedAmount)
     }
-
-```
-
-### <a name="Appwall">Adding the Appwall Ad API in iOS</a>
-
-```
-/**
-Get AppWall ViewController
-You should Call preloadAppWall method. Then Call showAppWallViewController method show Appwall.
-
-@param slot_id       Native AD ID
-@param customColor   If you want set custom UI,you should create ALSCustomColor object
-@param delegate      Set Delegate of Ads event (<ALSAppWallDelegate>)
-@param isTest        Use test advertisement or not
-@param success       The request is successful Block
-@param failure       The request failed Block, retuen error
-*/
-- (void)preloadAppWall:(NSString *)slot_id
-           customColor:(ALSCustomColor *)customColor
-              delegate:(id)delegate
-                isTest:(BOOL)isTest
-               success:(void(^)())success
-                failure:(void(^)(NSError *error))failure;
-			 
-/**
-Get App Wall ViewController
-
-@return AppWallViewController
-*/
-- (UIViewController *)showAppWallViewController;
-
-ALSAppWallDelegate interfaces related to Appwall, for more detail please check ALSAppWallDelegate in ALSADExternalDelegate.h
-     
-/**
-* User click the advertisement.
-*/
--(void)ALSAppWallDidClick:(ALSNativeAd *)nativeAd;
-/**
-* Advertisement landing page will show.
-*/
--(void)ALSAppWallDidIntoLandingPage:(ALSNativeAd *)nativeAd;
-/**
-* User left the advertisement landing page.
-*/
--(void)ALSAppWallDidLeaveLandingPage:(ALSNativeAd *)nativeAd;
-/**
-* Leave App
-*/
--(void)ALSAppWallWillLeaveApplication:(ALSNativeAd *)nativeAd;
-/**
-* User close the advertisement.
-*/
--(void)ALSAppWallClosed;
-/**
-* Jump failure
-*/
--(void)ALSAppWallJumpfail:(ALSNativeAd*)nativeAd;
-
-```
-
-###  <a name="Splash">Adding the Splash Ad API in iOS</a>
-* You need to add your own launch screen first. Then preload and show Splash AD immediately after opening the app.
-```
-#import <ApplinsSDK/ALSSplashAdDelegate.h>
-
-/**
-Preload Splash Ad
-Call this interface preload Splash AD.
- 
-@param slotid          Splash slot ID
-@param delegate      Set Delegate of Ads event
-@param window          Set UIWindow
-@param launchImage          Set LaunchImage
-@param customAdView        Set bottom custom view if needed
-@param waitAdTime        Set loading time, ad will not show if not ready during waitAdTime
-@param isTest          Use test advertisement or not
- */
-- (void)preloadaAndShowSplashAd:(NSString *)slotid delegate:(id)delegate window:(UIWindow*)window launchImage:(UIImage*)launchImage customAdView:(UIView*)view waitAdTime:(float)waitTime isTest:(BOOL)isTest;
-
-/**
-Delegate
-*/
-- (void)ALSSPlashAdSuccess;
-- (void)ALSSplashAdFailed:(NSError*)error;
-- (void)ALSSplashAdClicked;
-- (void)ALSSplashAdJumpedFailed;
-- (void)ALSSplashAdIsShow;
-``` 
-
-* Preload and show step by step. Control loading time and launch screen by your self.
-
-```
-/**
-Preload Splash Ad
-Call this interface preload Splash AD.  After calling this method, After  the ad sucessed , you need manually call the method -> "splashlAdShow:".
- 
-@param slotid          Splash slot ID
-@param delegate      Set Delegate of Ads event
-@param customAdView        Set bottom custom view if needed
-@param isTest          Use test advertisement or not
- */
-- (void)preloadSplashAd:(NSString *)slotid delegate:(id)delegate customAdView:(UIView*)view isTest:(BOOL)isTest;
-
-/**
-Show Splash ad
-Call this method after preloadSplashAd:delegate:Splash:customAdView:isTest  ad success
-@param vc   Launch ad  vc
-*/
-- (void)splashlAdShow:(UIViewController *)vc;
-
-/**
-Sample Code
-*/
-#import <ApplinsSDK/ALSSplashAdDelegate.h>
-
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-	[[Applins shareSDK] preloadSplashAd:@"Your slot ID" delegate:self customAdView:ad isTest:NO];
-}
-- (void)ALSSPlashAdSuccess {
-    	[[Applins shareSDK] splashlAdShow:self.window.rootViewController];
-}
 ```
 
 ### <a name="sdkDemo">SDK Demo Download</a>
