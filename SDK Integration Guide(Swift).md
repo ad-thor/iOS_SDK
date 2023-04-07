@@ -7,7 +7,7 @@
    	- [Https](#https)
   	- [GDPR(optional)](#gdpr)
   	- [COPPA(optional)](#coppa)
-  - [Initialization](#init)\
+  - [Initialization](#init)
   - [Banner](#banner)
   - [Dynamic Interstitial](#interstitial)
   - [Rewarded Video](#rewardedvideo)
